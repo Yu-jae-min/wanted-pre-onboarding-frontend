@@ -1,7 +1,7 @@
 import "./index.css";
-import Title from "../../components/common/Title";
+import Title from "../../components/Title/Title";
 import { useLoginValidation } from "../../hooks/useLoginValidation";
-import { getSignUpAPI } from "../../api/api";
+import { signUpAPI } from "../../api/api";
 
 const SignUp = () => {
   const { checkForm, disabled } = useLoginValidation();
@@ -14,7 +14,7 @@ const SignUp = () => {
       password: { value: pw },
     } = event.currentTarget;
 
-    getSignUpAPI({ email: id, password: pw });
+    signUpAPI({ email: id, password: pw });
   };
 
   return (

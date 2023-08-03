@@ -1,0 +1,28 @@
+.signUpWrap .formWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.signUpWrap .formWrap input {
+  width: 300px;
+  height: 50px;
+  padding: 0 10px;
+  border: 2px solid #111;
+}
+
+.signUpWrap .formWrap button {
+  width: 200px;
+  padding: 15px 50px;
+  margin-top: 20px;
+  background-color: rgb(98, 226, 78);
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid #111;
+  border-radius: 10px;
+
+  &:disabled {
+    background-color: rgb(118, 118, 118);
+  }
+}

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Title from "../../components/common/Title";
+import Title from "../../components/Title/Title";
 import "./index.css";
 
 const Home = () => {
