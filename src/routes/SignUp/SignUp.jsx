@@ -1,10 +1,16 @@
+import { useEffect } from "react";
 import "./index.css";
 import Title from "../../components/Title/Title";
 import { useLoginValidation } from "../../hooks/useLoginValidation";
-import { signUpAPI } from "../../api/api";
+import { signUpAPI } from "../../api/auth";
+import { useCheckLogin } from "../../hooks/useLoginCheck";
+import { usePageMove } from "../../hooks/usePageMove";
+import { routes } from "../index";
 
 const SignUp = () => {
   const { checkForm, disabled } = useLoginValidation();
+  const { isLogin } = useCheckLogin();
+  const { goToPage } = usePageMove();
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -16,6 +22,16 @@ const SignUp = () => {
 
     signUpAPI({ email: id, password: pw });
   };
+
+  useEffect(
+    function loginUserRedirect() {
+      if (isLogin) {
+        alert("이미 로그인 하셨습니다.");
+        goToPage(routes.todo);
+      }
+    },
+    [isLogin, goToPage]
+  );
 
   return (
     <div className="signUpWrap">

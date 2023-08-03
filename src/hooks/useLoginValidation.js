@@ -9,11 +9,11 @@ const useLoginValidation = () => {
   const checkForm = (event) => {
     const { name, value } = event.currentTarget;
 
-    const emailCheck = value.includes("@");
-    const passwordCheck = value.length >= 8;
-    const conditions = name === "email" ? emailCheck : passwordCheck;
+    const idValid = value.includes("@");
+    const pwValid = value.length >= 8;
+    const isValid = name === "email" ? idValid : pwValid;
 
-    if (conditions) setValidation({ ...validation, [name]: true });
+    setValidation({ ...validation, [name]: isValid });
   };
 
   const disabled = useMemo(() => {
