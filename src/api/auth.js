@@ -1,30 +1,34 @@
 import { axiosInstance } from "./axiosInstance";
-import { routes } from "../routes";
-
-const SIGN_UP_API_URL = "/auth/signup";
-const SIGN_IN_API_URL = "/auth/signin";
+import {
+  ROUTES,
+  ERROR_MASSAGE,
+  API_URL,
+  SUCCESS_MASSAGE,
+} from "../constants/constants";
 
 export const signUpAPI = async ({ email, password }) => {
   return axiosInstance
-    .post(SIGN_UP_API_URL, { email, password })
+    .post(API_URL.signUp, { email, password })
     .then(() => {
-      window.location.href = routes.signIn;
+      alert(SUCCESS_MASSAGE.signUp);
+      window.location.href = ROUTES.signIn;
     })
-    .catch((error) => {
-      console.error(error);
-      alert("에러가 발생했습니다. 가입 계정 정보를 확인해주세요.");
+    .catch((err) => {
+      if (err.response.data.message) {
+        return alert(err.response.data.message);
+      }
+      alert(ERROR_MASSAGE.signUp);
     });
 };
 
 export const signInAPI = async ({ email, password }) => {
   return axiosInstance
-    .post(SIGN_IN_API_URL, { email, password })
-    .then(({ data: { access_token } }) => {
+    .post(API_URL.signIn, { email, password })
+    .then(({ data }) => {
+      const { access_token } = data;
       localStorage.setItem("access_token", access_token);
-      window.location.href = routes.todo;
+      alert(SUCCESS_MASSAGE.signIn);
+      window.location.href = ROUTES.todo;
     })
-    .catch((error) => {
-      console.error(error);
-      alert("에러가 발생했습니다. 로그인 계정 정보를 확인해주세요.");
-    });
+    .catch(() => alert(ERROR_MASSAGE.signIn));
 };

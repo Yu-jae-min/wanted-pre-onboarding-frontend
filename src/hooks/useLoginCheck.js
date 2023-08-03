@@ -1,7 +1,6 @@
 import { useCallback, useMemo } from "react";
 import { usePageMove } from "./usePageMove";
-import { routes } from "../routes";
-import { ACCESS_TOKEN } from "../models/models";
+import { ROUTES, ACCESS_TOKEN, SUCCESS_MASSAGE } from "../constants/constants";
 
 const useCheckLogin = () => {
   const { goToPage } = usePageMove();
@@ -13,7 +12,8 @@ const useCheckLogin = () => {
 
   const logOut = useCallback(() => {
     localStorage.removeItem(ACCESS_TOKEN);
-    goToPage(routes.home);
+    alert(SUCCESS_MASSAGE.logOut);
+    goToPage(ROUTES.home);
   }, [goToPage]);
 
   return { isLogin, logOut };

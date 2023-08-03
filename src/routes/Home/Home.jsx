@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
-import Title from "../../components/Title/Title";
-import "./index.css";
-import { routes } from "../index";
-import { useCheckLogin } from "../../hooks/useLoginCheck";
 import { useMemo } from "react";
+import { Link } from "react-router-dom";
+import "./index.css";
+import Title from "../../components/Title/Title";
+import { useCheckLogin } from "../../hooks/useLoginCheck";
+import { ROUTES, TITLE_TEXT } from "../../constants/constants";
 
 const Home = () => {
   const { isLogin, logOut } = useCheckLogin();
@@ -17,7 +17,7 @@ const Home = () => {
       );
     }
 
-    return <Link to={routes.signIn}>로그인</Link>;
+    return <Link to={ROUTES.signIn}>로그인</Link>;
   }, [isLogin, logOut]);
 
   const signUpButton = useMemo(() => {
@@ -25,7 +25,7 @@ const Home = () => {
 
     return (
       <li>
-        <Link to={routes.signUp}>회원가입</Link>
+        <Link to={ROUTES.signUp}>회원가입</Link>
       </li>
     );
   }, [isLogin]);
@@ -33,14 +33,14 @@ const Home = () => {
   return (
     <div className="homeWrap">
       <Title
-        mainTitle="원티드 프리온보딩 프론트엔드 - 선발 과제"
-        subTitle="유재민"
+        mainTitle={TITLE_TEXT.mainTitle}
+        subTitle={TITLE_TEXT.subTitle.home}
       />
       <ul className="btnWrap">
         {signUpButton}
         <li>{loginButton}</li>
         <li>
-          <Link to={routes.todo}>투두 리스트</Link>
+          <Link to={ROUTES.todo}>투두 리스트</Link>
         </li>
       </ul>
     </div>
