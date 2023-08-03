@@ -1,8 +1,8 @@
 import { useMemo } from "react";
 import "./authForm.css";
-import { useLoginValidation } from "../../hooks/useLoginValidation";
-import { signUpAPI, signInAPI } from "../../api/auth";
-import { PLACE_HOLDER } from "../../constants/constants";
+import { useLoginValidation } from "../../../hooks/useLoginValidation";
+import { signUpAPI, signInAPI } from "../../../api/auth";
+import { PLACE_HOLDER } from "../../../constants/constants";
 
 const AuthForm = ({ type }) => {
   const { checkForm, disabled } = useLoginValidation();
