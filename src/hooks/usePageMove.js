@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 
-const usePageMove = (url) => {
+const usePageMove = () => {
   const navigate = useNavigate();
 
-  const goToPage = () => {
+  const goToPage = (url) => {
     navigate(url);
   };
 

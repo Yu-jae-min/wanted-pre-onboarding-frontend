@@ -20,7 +20,7 @@ img {
 }
 
 a {
-  text-decoration: none;
+  box-sizing: border-box;
 }
 
 select,
@@ -29,9 +29,8 @@ textarea {
   font-size: 16px;
 }
 
-input,
-button {
-  -webkit-appearance: none;
+ul {
+  list-style: none;
 }
 
 input::-webkit-contacts-auto-fill-button {
