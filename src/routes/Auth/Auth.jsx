@@ -1,11 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import Title from "../../components/Title/Title";
-import AuthForm from "../../components/AuthForm/AuthForm";
+import AuthForm from "./AuthForm/AuthForm";
 import { useCheckLogin } from "../../hooks/useLoginCheck";
 import { usePageMove } from "../../hooks/usePageMove";
 import { ROUTES, TITLE_TEXT, ERROR_MASSAGE } from "../../constants/constants";
 
-const SignIn = () => {
+const Auth = ({ type }) => {
   const { isLogin } = useCheckLogin();
   const { goToPage } = usePageMove();
 
@@ -19,15 +19,20 @@ const SignIn = () => {
     [isLogin, goToPage]
   );
 
+  const subTitle = useMemo(() => {
+    if (type === "signIn") {
+      return TITLE_TEXT.subTitle.signIn;
+    }
+
+    return TITLE_TEXT.subTitle.signUp;
+  }, [type]);
+
   return (
     <div className="signInWrap">
-      <Title
-        mainTitle={TITLE_TEXT.mainTitle}
-        subTitle={TITLE_TEXT.subTitle.signIn}
-      />
-      <AuthForm type={"signIn"} />
+      <Title mainTitle={TITLE_TEXT.mainTitle} subTitle={subTitle} />
+      <AuthForm type={type} />
     </div>
   );
 };
 
-export default SignIn;
+export default Auth;

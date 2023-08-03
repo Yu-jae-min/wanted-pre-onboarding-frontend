@@ -1,8 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import "./index.css";
 import Home from "./Home/Home";
-import SignUp from "./SignUp/SignUp";
-import SignIn from "./SignIn/SignIn";
+import Auth from "./Auth/Auth";
 import Todo from "./Todo/Todo";
 import NotFound from "./NotFound/NotFound";
 import { ROUTES } from "../constants/constants";
@@ -11,8 +10,8 @@ const App = () => {
   return (
     <Routes>
       <Route path={ROUTES.home} element={<Home />} />
-      <Route path={ROUTES.signUp} element={<SignUp />} />
-      <Route path={ROUTES.signIn} element={<SignIn />} />
+      <Route path={ROUTES.signUp} element={<Auth type={"signUp"} />} />
+      <Route path={ROUTES.signIn} element={<Auth type={"signIn"} />} />
       <Route path={ROUTES.todo} element={<Todo />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
