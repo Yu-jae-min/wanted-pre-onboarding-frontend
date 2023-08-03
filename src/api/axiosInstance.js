@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ACCESS_TOKEN } from "../models/models";
+import { ACCESS_TOKEN } from "../constants/constants";
 
 const axiosInstance = axios.create({
   baseURL: process.env.REACT_APP_API_URL,

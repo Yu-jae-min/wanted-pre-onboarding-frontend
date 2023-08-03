@@ -1,17 +1,17 @@
-.signUpWrap .formWrap {
+.formWrap {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.signUpWrap .formWrap input {
+.formWrap input {
   width: 300px;
   height: 50px;
   padding: 0 10px;
   border: 2px solid #111;
 }
 
-.signUpWrap .formWrap button {
+.formWrap button {
   width: 200px;
   padding: 15px 50px;
   margin-top: 20px;

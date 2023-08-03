@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import { usePageMove } from "../../hooks/usePageMove";
-import { routes } from "../index";
+import { ROUTES, ERROR_MASSAGE } from "../../constants/constants";
 
 const NotFound = () => {
   const { goToPage } = usePageMove();
 
   useEffect(() => {
-    goToPage(routes.home);
+    goToPage(ROUTES.home);
   }, [goToPage]);
 
-  return <div>잘못 된 접근입니다.</div>;
+  return <div>{ERROR_MASSAGE.notFount}</div>;
 };
 
 export default NotFound;

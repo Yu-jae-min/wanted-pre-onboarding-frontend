@@ -5,21 +5,15 @@ import SignUp from "./SignUp/SignUp";
 import SignIn from "./SignIn/SignIn";
 import Todo from "./Todo/Todo";
 import NotFound from "./NotFound/NotFound";
-
-export const routes = {
-  home: "/",
-  signUp: "/signup",
-  signIn: "/signin",
-  todo: "/todo",
-};
+import { ROUTES } from "../constants/constants";
 
 const App = () => {
   return (
     <Routes>
-      <Route path={routes.home} element={<Home />} />
-      <Route path={routes.signUp} element={<SignUp />} />
-      <Route path={routes.signIn} element={<SignIn />} />
-      <Route path={routes.todo} element={<Todo />} />
+      <Route path={ROUTES.home} element={<Home />} />
+      <Route path={ROUTES.signUp} element={<SignUp />} />
+      <Route path={ROUTES.signIn} element={<SignIn />} />
+      <Route path={ROUTES.todo} element={<Todo />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

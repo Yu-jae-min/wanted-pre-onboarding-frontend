@@ -3,7 +3,7 @@ import "./todoItem.css";
 import { updateTodoAPI, deleteTodoAPI } from "../../../api/todo";
 
 const TodoItem = (props) => {
-  const { id, isCompleted, todo, getTodosData } = props;
+  const { id, isCompleted, todo, refetch } = props;
   const [isEditMode, setIsEditMode] = useState(false);
   const [currentTodo, setCurrentTodo] = useState(todo);
   const [currentChecked, setCurrentChecked] = useState(isCompleted);
@@ -23,12 +23,12 @@ const TodoItem = (props) => {
 
     setCurrentChecked(checked);
     await updateTodoAPI(id, currentTodo, checked);
-    getTodosData();
+    refetch();
   };
 
   const updateTodo = async () => {
     await updateTodoAPI(id, currentTodo, currentChecked);
-    getTodosData();
+    refetch();
     changeEditMode();
   };
 
@@ -39,7 +39,7 @@ const TodoItem = (props) => {
 
   const deleteHandler = async () => {
     await deleteTodoAPI(id);
-    getTodosData();
+    refetch();
   };
 
   const todoButtons = useMemo(() => {
