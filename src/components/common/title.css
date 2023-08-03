@@ -1,0 +1,12 @@
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.titleWrap span {
+  color: #9f9f9f;
+  font-size: 16px;
+  font-weight: 500;
+}

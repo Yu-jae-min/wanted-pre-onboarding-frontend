@@ -1,0 +1,9 @@
+.homeWrap .btnWrap a {
+  padding: 15px 50px;
+  background-color: rgb(98, 226, 78);
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid #111;
+  border-radius: 10px;
+}
