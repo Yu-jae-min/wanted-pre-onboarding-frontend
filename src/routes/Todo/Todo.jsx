@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import "./index.css";
-import Title from "../../components/Title/Title";
+import Title from "../../components/Title";
 import TodoItem from "./TodoItem/TodoItem";
 import { useCheckLogin } from "../../hooks/useLoginCheck";
 import { usePageMove } from "../../hooks/usePageMove";

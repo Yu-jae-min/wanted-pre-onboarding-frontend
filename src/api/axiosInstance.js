@@ -1,8 +1,8 @@
 import axios from "axios";
-import { ACCESS_TOKEN } from "../constants/constants";
+import { ACCESS_TOKEN, API_BASE_URL } from "../constants/constants";
 
 const axiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
+  baseURL: API_BASE_URL,
   headers: {
     "Access-Control-Allow-Origin": "*",
     "Content-Type": "application/json",

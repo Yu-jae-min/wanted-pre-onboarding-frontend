@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# wanted-pre-onboarding-frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+원티드 프리온보딩 프론트엔드 선발 과제입니다.
 
-## Available Scripts
+<br />
 
-In the project directory, you can run:
+## 👬 **지원자 성명**
 
-### `npm start`
+- 유재민
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📅 **개발 기간**
 
-### `npm test`
+- 2023년 08월 03일 ~ 2023년 08월 04일
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br />
 
-### `npm run build`
+## 🔧 **기술스택**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- react, react-router-dom, axios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎉 **배포 주소**
 
-### `npm run eject`
+- [https://kpa-pedia.netlify.app/](https://kpa-pedia.netlify.app/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<br />
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 💻 **설치 및 실행 방법**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. repository 클론
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+git clone https://github.com/Yu-jae-min/wanted-pre-onboarding-frontend.git
+```
 
-## Learn More
+2. dependencies 설치
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. 실행
 
-### Code Splitting
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<br>
 
-### Analyzing the Bundle Size
+## 📒 **데모 영상**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![empty](empty)
 
-### Making a Progressive Web App
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📘 **구현 목록**
 
-### Advanced Configuration
+- [x] 회원가입 및 로그인
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  - [x] UI 구현
 
-### Deployment
+  - [x] validation 적용
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    - [x] email validation : `@`를 포함
 
-### `npm run build` fails to minify
+    - [x] password validation : 8자 이상
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    - [x] validation 통과하지 못하는 경우 button disabled
+
+  - [x] 예외 처리
+
+    - [x] 회원 가입 시 가입 완료 및 이미 있는 계정인 경우, 로그인 시 로그인 완료 및 비밀 번호가 틀린 경우 alert message 노출
+
+    - [x] 회원 가입 완료 시 sing in 페이지로 이동
+
+    - [x] 로그인 완료 시 todo 페이지로 이동
+
+    - [x] 로그인 완료 시 JWT 로컬 스토리지 저장
+
+    - [x] 로그인 한 상태로 로그인 및 회원가입 페이지 접근 시 todo 페이지로 redirect
+
+- [x] 투두 리스트
+
+  - [x] UI 구현
+
+  - [x] 투두 리스트 노출 및 완료 여부 표시
+
+  - [x] 투두 리스트 추가 기능 구현
+
+  - [x] 투두 리스트 수정 기능 구현
+
+    - [x] 수정 버튼 클릭 시 수정 모드 활성화 및 투두 내용이 input에 입력
+
+    - [x] 수정 모드에서 투두 내용 변경 후 제출 버튼 클릭 시 투두 내용 업데이트
+
+    - [x] 수정 모드에서 취소 버튼 클릭 시 기존 투두 내용 유지
+
+  - [x] 투두 리스트 삭제 기능 구현
+
+  - [x] 예외 처리
+
+    - [x] 로그인 하지 않은 상태로 투두 페이지 접근 시 sign in 페이지로 redirect
+
+<br>

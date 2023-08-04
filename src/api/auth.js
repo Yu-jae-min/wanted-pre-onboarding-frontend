@@ -4,6 +4,7 @@ import {
   ERROR_MASSAGE,
   API_URL,
   SUCCESS_MASSAGE,
+  ACCESS_TOKEN,
 } from "../constants/constants";
 
 export const signUpAPI = async ({ email, password }) => {
@@ -26,7 +27,7 @@ export const signInAPI = async ({ email, password }) => {
     .post(API_URL.signIn, { email, password })
     .then(({ data }) => {
       const { access_token } = data;
-      localStorage.setItem("access_token", access_token);
+      localStorage.setItem(ACCESS_TOKEN, access_token);
       alert(SUCCESS_MASSAGE.signIn);
       window.location.href = ROUTES.todo;
     })

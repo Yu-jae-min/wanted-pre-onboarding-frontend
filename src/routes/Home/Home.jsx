@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
-import Title from "../../components/Title/Title";
+import Title from "../../components/Title";
 import { useCheckLogin } from "../../hooks/useLoginCheck";
 import { ROUTES, TITLE_TEXT } from "../../constants/constants";
 

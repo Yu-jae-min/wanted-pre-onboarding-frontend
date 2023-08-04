@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from "react";
-import Title from "../../components/Title/Title";
+import Title from "../../components/Title";
 import AuthForm from "./AuthForm/AuthForm";
 import { useCheckLogin } from "../../hooks/useLoginCheck";
 import { usePageMove } from "../../hooks/usePageMove";
