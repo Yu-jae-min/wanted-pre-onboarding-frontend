@@ -24,7 +24,7 @@
 
 ## 🎉 **배포 주소**
 
-- [https://kpa-pedia.netlify.app/](https://kpa-pedia.netlify.app/)
+- [https://wanted-pob-frontend-yujaemin.netlify.app/](https://wanted-pob-frontend-yujaemin.netlify.app/)
 
 <br />
 
