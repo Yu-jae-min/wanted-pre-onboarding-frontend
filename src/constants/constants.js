@@ -13,6 +13,8 @@ export const API_URL = {
 
 export const ACCESS_TOKEN = "access_token";
 
+export const API_BASE_URL = "https://www.pre-onboarding-selection-task.shop";
+
 export const ERROR_MASSAGE = {
   signUp: "에러가 발생했습니다. 가입 계정 정보를 확인해주세요.",
   signIn: "에러가 발생했습니다. 로그인 계정 정보를 확인해주세요.",
