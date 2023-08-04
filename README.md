@@ -22,9 +22,11 @@
 
 <br />
 
-## 🎉 **배포 주소**
+## 🎉 **배포 주소 및 데모 영상**
 
-- [https://wanted-pob-frontend-yujaemin.netlify.app/](https://wanted-pob-frontend-yujaemin.netlify.app/)
+- 배포 주소 : [https://wanted-pob-frontend-yujaemin.netlify.app/](https://wanted-pob-frontend-yujaemin.netlify.app/)
+
+- 데모 영상 : [https://youtu.be/wEQyzf4zCIc](https://youtu.be/wEQyzf4zCIc)
 
 <br />
 
@@ -47,12 +49,6 @@ npm install
 ```
 npm start
 ```
-
-<br>
-
-## 📒 **데모 영상**
-
-![empty](empty)
 
 <br />
 
